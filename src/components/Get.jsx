@@ -17,7 +17,7 @@ function gettata() {
 
 
   console.log('run');
-  axios.get(`${TheDisPlayUrl}/${baseURL}`,)
+  axios.get(`${TheDisPlayUrl}${baseURL}`,)
   .then(response => {
     setTasks(response.data);
   })
