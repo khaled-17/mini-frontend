@@ -8,15 +8,16 @@ export default function Get(props) {
   const [tasks, setTasks] = useState();
 
  const baseURL=props.url
+ const TheDisPlayUrl=props.DisPlayUrl
 function gettata() {
   
 
 // const theURL="http://localhost:5000"
-const theURL="https://www.todo.egysnakes.com"
+// const theURL="https://www.todo.egysnakes.com"
 
 
   console.log('run');
-  axios.get(`${theURL}/${baseURL}`,)
+  axios.get(`${TheDisPlayUrl}/${baseURL}`,)
   .then(response => {
     setTasks(response.data);
   })
@@ -34,7 +35,8 @@ function delet(params) {
 
   return (
     <div style={{borderStyle:"solid"}}>
-      <div>{props.title}</div>
+      <div>{TheDisPlayUrl}</div>
+      <div style={{color:'red'}}>{props.title}</div>
       <div>'</div>
       <button onClick={gettata}>get</button>
       <button onClick={delet}>delet</button>

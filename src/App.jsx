@@ -10,11 +10,9 @@ function App() {
 
 
 
-  const [displayUrl, setDisplayUrl] = useState('http://localhost:5000/');
+  const [displayUrl, setDisplayUrl] = useState('https://back-end-huig.onrender.com/');
 
-  const toggleText = () => {
-    setDisplayUrl(displayUrl === 'http://localhost:5000/' ? 'https://todo.egysnakes.com' : 'http://localhost:5000/');
-  };
+  
 
 
   return (
@@ -29,8 +27,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <button onClick={toggleText}>تبديل</button>
-      <p>{displayUrl}</p>
+       <p>{displayUrl}</p>
 
 
 
@@ -40,9 +37,9 @@ function App() {
         </button>
        <div style={{display:'flex',}}>
         
-        <Get  url={'api/v2/tasks'}  title={'api/v2/tasks'}/>
-        <Get  url={'api/v2/'}  title={'api/v2/'}/>
-        <Get  url={'api/v2/name'}  title={'api/v2/name'}/>
+        <Get DisPlayUrl={displayUrl}  url={'api/v2/tasks'}  title={'api/v2/tasks'}/>
+        <Get DisPlayUrl={displayUrl}  url={'api/v2/'}  title={'api/v2/'}/>
+        <Get DisPlayUrl={displayUrl}  url={'api/v2/name'}  title={'api/v2/name'}/>
          </div>
       </div>
       <Post />
